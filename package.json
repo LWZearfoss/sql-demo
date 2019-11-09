@@ -1,0 +1,15 @@
+{
+  "name": "sql",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx nodemon server.js"
+  },
+  "dependencies": {
+    "csv-parse": "^4.6.5",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "pug": "^2.0.4",
+    "ssh2-promise": "^0.1.5"
+  }
+}

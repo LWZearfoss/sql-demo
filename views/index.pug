@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title #{title}
+    link(rel='stylesheet', href='/css/style.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    main
+      block header
+        header
+          h1 #{title}
+      block content
+
+block css
+
+block content
+  form(method='POST' onsubmit='return false;')
+    button(type='button' onclick="download(csv, 'data.csv')") Download
+    button#button(type='submit' onclick="makeTable(document.getElementById('query').value)") Enter
+    div(style="overflow:hidden; padding-right: .5em;")
+      input#query(type='text', placeholder='ENTER QUERY')
+  table#table(border='1')
+  script(src="/app.js")
+  script.
+        makeTable();
